@@ -1,3 +1,18 @@
+<%
+  fields = [ :email, :user_name, :pin, :website, :address, :alias ]
+%>
+
+<%= form_tag do %>
+
+  <% fields.each do |field| %>
+  <p>
+    <%= field %>: <%= text_field_tag field %>
+  </p>
+  <% end %>
+
+<% end %>
+
+<hr>
 <label for="email">email</label>
 <input type="text" name="email" id="email" class="fancy_form" >
 
